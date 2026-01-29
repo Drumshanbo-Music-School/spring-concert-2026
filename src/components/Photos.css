@@ -1,0 +1,118 @@
+.photos-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+.photo-placeholder {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 249, 230, 0.9) 100%);
+  height: 280px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(29, 61, 10, 0.15);
+  border: 3px solid var(--medium-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  animation: shine 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(20px, 20px) rotate(180deg); }
+}
+
+.photo-card:hover .photo-placeholder {
+  box-shadow: 0 15px 40px rgba(29, 61, 10, 0.25);
+  border-color: var(--gold);
+}
+
+.photo-icon {
+  font-size: 4rem;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-card:hover .photo-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.photo-label {
+  font-size: 1.2rem;
+  color: var(--dark-green);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .photo-placeholder {
+    height: 240px;
+  }
+
+  .photo-icon {
+    font-size: 3.5rem;
+  }
+
+  .photo-label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .photo-placeholder {
+    height: 220px;
+  }
+
+  .photo-icon {
+    font-size: 3rem;
+  }
+
+  .photo-label {
+    font-size: 1rem;
+  }
+}

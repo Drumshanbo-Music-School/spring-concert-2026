@@ -1,0 +1,26 @@
+.blossom-decoration {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 40px 0;
+  opacity: 0.5;
+  animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+@media (max-width: 768px) {
+  .blossom-decoration {
+    font-size: 2rem;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blossom-decoration {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+}

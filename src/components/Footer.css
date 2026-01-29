@@ -1,0 +1,24 @@
+.footer {
+  background: var(--dark-green);
+  color: var(--light-yellow);
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid var(--gold);
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+
+.footer-tagline {
+  margin-top: 12px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

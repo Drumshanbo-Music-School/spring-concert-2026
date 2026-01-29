@@ -1,0 +1,105 @@
+.performers-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.performers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.performer-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 249, 230, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid var(--medium-green);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(29, 61, 10, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.performer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.performer-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(29, 61, 10, 0.25);
+  border-color: var(--gold);
+}
+
+.performer-card:hover::before {
+  opacity: 1;
+}
+
+.performer-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  transition: all 0.4s ease;
+}
+
+.performer-card:hover .performer-icon {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.performer-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.performer-instrument {
+  color: var(--medium-green);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .performers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .performer-card {
+    padding: 30px 20px;
+  }
+
+  .performer-icon {
+    font-size: 3rem;
+  }
+
+  .performer-name {
+    font-size: 1.2rem;
+  }
+
+  .performer-instrument {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .performers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

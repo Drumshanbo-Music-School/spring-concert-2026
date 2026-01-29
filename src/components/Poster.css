@@ -1,0 +1,133 @@
+.poster-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.poster-placeholder {
+  background: linear-gradient(135deg, var(--accent-white) 0%, var(--light-yellow) 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow:
+    0 20px 60px rgba(29, 61, 10, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 4px solid var(--dark-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  opacity: 0.6;
+}
+
+.poster-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.poster-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: bloom 3s ease-in-out infinite;
+}
+
+@keyframes bloom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.poster-content h3 {
+  font-size: 1.8rem;
+  color: var(--medium-green);
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.poster-content h2 {
+  font-size: 3rem;
+  color: var(--dark-green);
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0 rgba(212, 175, 55, 0.2);
+}
+
+.poster-divider {
+  font-size: 2rem;
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+.poster-content p {
+  font-size: 1.3rem;
+  color: var(--dark-green);
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.poster-detail {
+  margin-top: 20px;
+  font-size: 1.1rem !important;
+  color: var(--medium-green) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .poster-placeholder {
+    padding: 40px 30px;
+  }
+
+  .poster-icon {
+    font-size: 3rem;
+  }
+
+  .poster-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .poster-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .poster-content p {
+    font-size: 1.1rem;
+  }
+
+  .poster-detail {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster-placeholder {
+    padding: 30px 20px;
+  }
+
+  .poster-icon {
+    font-size: 2.5rem;
+  }
+
+  .poster-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .poster-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .poster-content p {
+    font-size: 1rem;
+  }
+}

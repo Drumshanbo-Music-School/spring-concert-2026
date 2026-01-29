@@ -1,0 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 15px;
+  }
+}
