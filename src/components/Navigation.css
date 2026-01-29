@@ -1,5 +1,10 @@
 .navigation {
-  background: rgba(29, 61, 10, 0.95);
+  background:
+    linear-gradient(to bottom, rgba(26, 61, 10, 0.75), rgba(29, 61, 10, 0.75)),
+    url('../assets/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   backdrop-filter: blur(10px);
   padding: 20px 0;
   position: sticky;

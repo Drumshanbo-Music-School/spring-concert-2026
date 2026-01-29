@@ -1,11 +1,14 @@
 import React from 'react'
 import './Charity.css'
+import sligoCancerLogo from '../assets/sligo-cancer-support-centre-logo.png'
 
 const Charity = () => {
   return (
     <section className="charity-section" id="charity">
       <div className="charity-container">
-        <div className="charity-logo">💚</div>
+        <div className="charity-logo">
+          <img src={sligoCancerLogo} alt="Sligo Cancer Support Centre" />
+        </div>
         <h2 className="charity-title">Supporting Sligo Cancer Care</h2>
         <div className="charity-divider"></div>
         <div className="charity-description">

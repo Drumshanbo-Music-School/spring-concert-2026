@@ -1,5 +1,10 @@
 .header {
-  background: linear-gradient(135deg, var(--dark-green) 0%, var(--medium-green) 50%, var(--light-green) 100%);
+  background:
+    linear-gradient(135deg, rgba(26, 61, 10, 0.65) 0%, rgba(61, 107, 46, 0.65) 50%, rgba(107, 153, 86, 0.55) 100%),
+    url('../assets/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--light-yellow);
   padding: 80px 20px 60px;
   text-align: center;
